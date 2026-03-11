@@ -1,98 +1,122 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# User Authentication App
 
-# Getting Started
+A React Native authentication application built using TypeScript, Context API, React Navigation, and AsyncStorage.
+This project demonstrates a complete authentication flow with local data persistence, including Signup, Login, and Home screens.
 
-> **Note**: Make sure you have completed the [Set Up Your Environment](https://reactnative.dev/docs/set-up-your-environment) guide before proceeding.
+The goal of this project is to showcase React Native best practices, reusable components, and clean architecture.
 
-## Step 1: Start Metro
+## Features
 
-First, you will need to run **Metro**, the JavaScript build tool for React Native.
+## User Signup
+Create a new account using:
+Name
+Email
+Password
+Validates required fields before saving
+Stores user data locally using AsyncStorage
 
-To start the Metro dev server, run the following command from the root of your React Native project:
+## User Login
+Login with registered credentials
+Validates email and password
+Displays error message if credentials are incorrect
 
-```sh
-# Using npm
-npm start
+## Home Screen
+Displays logged-in user information
+Shows:Name,Email
+Includes Logout functionality
 
-# OR using Yarn
-yarn start
-```
+## Password Visibility Toggle
+Password input supports Show / Hide password
+Improves usability during authentication
 
-## Step 2: Build and run your app
+## Persistent Login (Session Storage)
+Uses AsyncStorage to persist login session
+User remains logged in after restarting the app
 
-With Metro running, open a new terminal window/pane from the root of your React Native project, and use one of the following commands to build and run your Android or iOS app:
+## Tech Stack
+React Native
+TypeScript
+React Navigation
+Context API
+AsyncStorage
+Functional Components
+React Hooks
 
-### Android
+## Project Architecture
+## Project Architecture
+The project follows a modular folder structure for better scalability and maintainability.
 
-```sh
-# Using npm
-npm run android
+UserAuthenticationApp
+│
+├── src
+│   ├── components
+│   │   └── PasswordInput.tsx
+│   │
+│   ├── context
+│   │   └── AuthContext.tsx
+│   │
+│   ├── navigation
+│   │   └── AppNavigator.tsx
+│   │
+│   ├── screens
+│   │   ├── LoginScreen.tsx
+│   │   ├── SignupScreen.tsx
+│   │   └── HomeScreen.tsx
+│   │
+│   ├── types
+│       └── authTypes.ts
+|       |___vector.icon.d.ts
+|      
+│   
+│    
+│
+├── App.tsx
+├── package.json
+└── README.md
 
-# OR using Yarn
-yarn android
-```
+## Authentication Flow
+Signup Screen
+     ↓
+Login Screen
+     ↓
+Home Screen
+     ↓
+Logout
 
-### iOS
+## Installation
 
-For iOS, remember to install CocoaPods dependencies (this only needs to be run on first clone or after updating native deps).
+Clone the repository:
+## git clone https://github.com/m1r1r2/UserAuthenticationApp.git
 
-The first time you create a new project, run the Ruby bundler to install CocoaPods itself:
+Navigate to the project directory:
+## cd UserAuthenticationApp
 
-```sh
-bundle install
-```
+Install dependencies:
+## npm install
 
-Then, and every time you update your native dependencies, run:
+## Running the Application
 
-```sh
-bundle exec pod install
-```
+## Run on Android
+ npx react-native run-android
 
-For more information, please visit [CocoaPods Getting Started guide](https://guides.cocoapods.org/using/getting-started.html).
+## Run on iOS
+cd ios
+pod install
+cd ..
+npx react-native run-ios
 
-```sh
-# Using npm
-npm run ios
+## Validation
+The application performs basic validation for:
+Empty fields
+Email format
+Password presence
+Appropriate error messages are shown to guide the user.
 
-# OR using Yarn
-yarn ios
-```
+## Folder Description
+- **components** – Reusable UI components (e.g., PasswordInput)
+- **context** – Global state management using Context API
+- **navigation** – Navigation setup using React Navigation
+- **screens** – Application screens such as Login, Signup, and Home
+- **types** – TypeScript interfaces and type definitions
+- **assets/icons** – Application icons or image assets used in the UI
 
-If everything is set up correctly, you should see your new app running in the Android Emulator, iOS Simulator, or your connected device.
-
-This is one way to run your app — you can also build it directly from Android Studio or Xcode.
-
-## Step 3: Modify your app
-
-Now that you have successfully run the app, let's make changes!
-
-Open `App.tsx` in your text editor of choice and make some changes. When you save, your app will automatically update and reflect these changes — this is powered by [Fast Refresh](https://reactnative.dev/docs/fast-refresh).
-
-When you want to forcefully reload, for example to reset the state of your app, you can perform a full reload:
-
-- **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Dev Menu**, accessed via <kbd>Ctrl</kbd> + <kbd>M</kbd> (Windows/Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (macOS).
-- **iOS**: Press <kbd>R</kbd> in iOS Simulator.
-
-## Congratulations! :tada:
-
-You've successfully run and modified your React Native App. :partying_face:
-
-### Now what?
-
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [docs](https://reactnative.dev/docs/getting-started).
-
-# Troubleshooting
-
-If you're having issues getting the above steps to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
-
-# Learn More
-
-To learn more about React Native, take a look at the following resources:
-
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
-# UserAuthenticationApp

@@ -5,9 +5,9 @@ This project demonstrates a complete authentication flow with local data persist
 
 The goal of this project is to showcase React Native best practices, reusable components, and clean architecture.
 
-## Features
+ **Features**
 
-## User Signup
+**User Signup**
 Create a new account using:
 Name
 Email
@@ -15,25 +15,25 @@ Password
 Validates required fields before saving
 Stores user data locally using AsyncStorage
 
-## User Login
+**User Login**
 Login with registered credentials
 Validates email and password
 Displays error message if credentials are incorrect
 
-## Home Screen
+**Home Screen**
 Displays logged-in user information
 Shows:Name,Email
 Includes Logout functionality
 
-## Password Visibility Toggle
+**Password Visibility Toggle**
 Password input supports Show / Hide password
 Improves usability during authentication
 
-## Persistent Login (Session Storage)
+**Persistent Login (Session Storage)**
 Uses AsyncStorage to persist login session
 User remains logged in after restarting the app
 
-## Tech Stack
+**Tech Stack**
 React Native
 TypeScript
 React Navigation
@@ -42,8 +42,7 @@ AsyncStorage
 Functional Components
 React Hooks
 
-## Project Architecture
-## Project Architecture
+**Project Architecture**
 The project follows a modular folder structure for better scalability and maintainability.
 
 UserAuthenticationApp
@@ -73,8 +72,7 @@ UserAuthenticationApp
 ├── App.tsx
 ├── package.json
 └── README.md
-
-## Authentication Flow
+**Authentication Flow**
 Signup Screen
      ↓
 Login Screen
@@ -86,26 +84,26 @@ Logout
 ## Installation
 
 Clone the repository:
-## git clone https://github.com/m1r1r2/UserAuthenticationApp.git
+**git clone https://github.com/m1r1r2/UserAuthenticationApp.git**
 
 Navigate to the project directory:
-## cd UserAuthenticationApp
+ **cd UserAuthenticationApp**
 
 Install dependencies:
-## npm install
+**npm install**
 
 ## Running the Application
 
-## Run on Android
+ **Run on Android**
  npx react-native run-android
 
-## Run on iOS
+**Run on iOS**
 cd ios
 pod install
 cd ..
 npx react-native run-ios
 
-## Validation
+**Validation**
 The application performs basic validation for:
 Empty fields
 Email format

@@ -40,7 +40,12 @@ const SignupScreen = ({ navigation }: Props) => {
       return;
     }
 
-    Alert.alert('Success', 'Signup successful');
+    Alert.alert('Success', 'Signup successful', [
+      {
+        text: 'OK',
+        onPress: () => navigation.replace('Login'),
+      },
+    ]);
   };
 
   return (

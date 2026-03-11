@@ -85,8 +85,8 @@ export const AuthProvider =({children}:{children:React.ReactNode})=>{
         const updateUser = [...users,newUser]
 
         await saveRegisteredUser(updateUser)
-        setUser(newUser)
-        await AsyncStorage.setItem(AUTH_USER_KEY,JSON.stringify(newUser))
+        //setUser(newUser)
+        //await AsyncStorage.setItem(AUTH_USER_KEY,JSON.stringify(newUser))
         return {success : true};
 
     }

@@ -16,25 +16,26 @@ const LoginScreen = ({ navigation }: Props) => {
 
   const handleLogin = async () => {
     setError('');
-
+  
     if (!isValidEmail(email)) {
       setError('Invalid email format.');
       return;
     }
-
+  
     if (!password) {
       setError('Password is required.');
       return;
     }
-
+  
     const response = await login({ email, password });
-
+  
     if (!response.success) {
       setError(response.message || 'Login failed');
       return;
     }
-
+  
     Alert.alert('Success', 'Logged in successfully');
+  
   };
 
   return (
